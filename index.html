@@ -28,7 +28,7 @@ section{padding:42px 0}.section-head{max-width:790px;margin-bottom:32px}.kicker{
 .cta{background:var(--navy);color:#fff;border-radius:16px;padding:39px;display:flex;justify-content:space-between;align-items:center;gap:25px}.cta h2{font-family:Montserrat;margin:0 0 7px}.cta p{margin:0;color:#cbd9ea;font-size:13px}
 .feature{display:grid;grid-template-columns:repeat(3,1fr);gap:17px}.feature .card{background:var(--navy);color:#fff;border:0}.feature .card h3{color:#fff}.feature .card p{color:#cbd9ea}
 footer{background:#07182d;color:#b8c7d9;padding:34px 0 20px}.footer-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:40px}.footer-title{color:#fff;font-family:Montserrat;margin-bottom:10px}.footer-brand{font-family:Montserrat;color:#fff;font-size:19px}.footer-grid p,.footer-grid a{font-size:12px;color:#9fb0c5}.copyright{border-top:1px solid rgba(255,255,255,.1);margin-top:32px;padding-top:16px;font-size:10px;color:#7f93ab}
-@media(max-width:900px){nav{display:none}.menu{display:block}.quick-grid,.cards,.dates,.feature{grid-template-columns:1fr 1fr}.about-grid,.committee,.registration{grid-template-columns:1fr}.row{grid-template-columns:85px 1fr}.room{display:none}.footer-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:900px){nav{display:none}.menu{display:flex;align-items:center;justify-content:center;width:40px;height:40px;padding:0;border:1px solid var(--line);background:#fff;border-radius:8px;font-size:24px;line-height:1;cursor:pointer;z-index:1001}.quick-grid,.cards,.dates,.feature{grid-template-columns:1fr 1fr}.about-grid,.committee,.registration{grid-template-columns:1fr}.row{grid-template-columns:85px 1fr}.room{display:none}.footer-grid{grid-template-columns:1fr 1fr}}
 @media(max-width:600px){.logo-img{width:180px;height:56px;overflow:visible}.logo-img img{max-width:100%;max-height:100%;object-fit:contain}.org-item:first-child .org-logo{width:88px;flex-basis:88px}.org-logo{width:54px;height:54px;flex-basis:54px}.hero h2{font-size:9px}.topbar .container{display:block;text-align:center}.nav{height:68px}.brand strong{font-size:13px}.hero{padding:18px 0 16px}.hero h1{font-size:25px}.quick-grid,.cards,.dates,.feature,.footer-grid{grid-template-columns:1fr}.quick-card{border-right:0;border-bottom:1px solid var(--line)}section{padding:55px 0}.cta{padding:29px;display:block}.cta .btn{margin-top:18px}}
 </style>
 <style id="gu-logo-align-fix">
@@ -46,19 +46,32 @@ footer{background:#07182d;color:#b8c7d9;padding:34px 0 20px}.footer-grid{display
 .venue-contact-link:hover{border-color:var(--accent);box-shadow:0 4px 14px rgba(15,35,58,.08)}
 </style>
 
-<style id="mobile-menu-fix">
-@media (max-width: 760px){
-  .nav-toggle{display:flex!important;flex-direction:column;justify-content:center;align-items:center;gap:4px;width:40px;height:40px;padding:7px;background:transparent;border:1px solid var(--line);border-radius:8px;cursor:pointer}
-  .nav-toggle span{display:block!important;width:20px;height:2px;background:var(--navy);border-radius:2px}
-}
-@media (min-width: 761px){
-  .nav-toggle{display:none!important}
-}
-</style>
-
-<style id="mobile-menu-open-fix">
-@media (max-width:760px){
-  .nav-links.mobile-open{display:flex!important}
+<style id="mobile-nav-functional-fix">
+@media(max-width:900px){
+  nav.mobile-open{
+    display:flex!important;
+    position:absolute;
+    top:76px;
+    right:4%;
+    left:4%;
+    flex-direction:column;
+    align-items:stretch;
+    gap:0;
+    padding:10px;
+    background:#fff;
+    border:1px solid var(--line);
+    border-radius:10px;
+    box-shadow:0 12px 30px rgba(15,23,42,.12);
+    white-space:normal;
+    z-index:1000;
+  }
+  nav.mobile-open a{
+    display:block;
+    padding:10px 12px;
+    border-radius:6px;
+  }
+  nav.mobile-open a:hover{background:var(--bg)}
+  nav.mobile-open .btn{display:block;text-align:center;margin-top:4px}
 }
 </style>
 </head>
@@ -66,7 +79,7 @@ footer{background:#07182d;color:#b8c7d9;padding:34px 0 20px}.footer-grid{display
 <div class="topbar"><div class="container"><span>National Institute of Electronics &amp; Information Technology (NIELIT)</span><span>1st International Conclave of NIELIT on Bio-AI</span></div></div>
 <header><div class="container nav">
 <a class="brand" href="#home"><div class="logo-img"><img src="confLogo.jpeg" alt="NIELIT bioAI Conclave logo"></div><div><strong>NIELIT Bio-AI Conclave 2026</strong><small>NIELIT Bio-AI-2026</small></div></a>
-<button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button><nav><a href="#about">About</a><a href="#tracks">Tracks</a><a href="#dates">Dates</a><a href="#committee">Committee</a><a href="#program">Programme</a><a href="#showcase">Showcase</a><a href="#workshops">Workshops</a><a href="#contact">Contact</a><a class="btn btn-primary" href="#submission">Submit Abstract</a></nav>
+<nav><a href="#about">About</a><a href="#tracks">Tracks</a><a href="#dates">Dates</a><a href="#committee">Committee</a><a href="#program">Programme</a><a href="#showcase">Showcase</a><a href="#workshops">Workshops</a><a href="#contact">Contact</a><a class="btn btn-primary" href="#submission">Submit Abstract</a></nav>
 <button class="menu" aria-label="Menu">☰</button></div></header>
 
 <main>
@@ -191,19 +204,30 @@ footer{background:#07182d;color:#b8c7d9;padding:34px 0 20px}.footer-grid{display
 </main>
 <footer><div class="container"><div class="footer-grid"><div><div class="footer-brand">NIELIT Bio-AI Conclave 2026</div><p>Envisioning the Future of Life Sciences through Artificial Intelligence, Bioinformatics and Digital Innovation.</p><p>1st International Conclave of NIELIT on Bio-AI.</p></div><div><div class="footer-title">Conclave</div><a href="#about">About</a><br><a href="#tracks">Tracks</a><br><a href="#program">Programme</a><br><a href="#showcase">Research Showcase</a></div><div><div class="footer-title">Participation</div><a href="#submission">Submit Abstract / Poster</a><br><a href="#workshops">Workshops</a><br><a href="#contact">Venue &amp; Contact</a></div></div><div class="copyright">© 2026 NIELIT Bio-AI Conclave. Content based on the supplied conference planning document. Verify all programme timings, names, links and official contact details before publication.</div></div></footer>
 
-<script id="mobile-menu-script">
+<script id="mobile-nav-functional-script">
 document.addEventListener('DOMContentLoaded', function () {
-  const toggle = document.querySelector('.nav-toggle');
-  const menu = document.querySelector('.nav-links');
-  if (!toggle || !menu) return;
-  toggle.addEventListener('click', function () {
-    const open = menu.classList.toggle('mobile-open');
-    toggle.setAttribute('aria-expanded', String(open));
+  const menuButton = document.querySelector('.menu');
+  const nav = document.querySelector('header nav');
+  if (!menuButton || !nav) return;
+
+  menuButton.setAttribute('type', 'button');
+  menuButton.setAttribute('aria-expanded', 'false');
+
+  menuButton.addEventListener('click', function (event) {
+    event.preventDefault();
+    event.stopPropagation();
+    const open = nav.classList.toggle('mobile-open');
+    menuButton.setAttribute('aria-expanded', open ? 'true' : 'false');
+    menuButton.setAttribute('aria-label', open ? 'Close menu' : 'Menu');
+    menuButton.textContent = open ? '×' : '☰';
   });
-  menu.querySelectorAll('a').forEach(function (a) {
-    a.addEventListener('click', function () {
-      menu.classList.remove('mobile-open');
-      toggle.setAttribute('aria-expanded', 'false');
+
+  nav.querySelectorAll('a').forEach(function (link) {
+    link.addEventListener('click', function () {
+      nav.classList.remove('mobile-open');
+      menuButton.setAttribute('aria-expanded', 'false');
+      menuButton.setAttribute('aria-label', 'Menu');
+      menuButton.textContent = '☰';
     });
   });
 });
