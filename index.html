@@ -165,6 +165,50 @@ footer{background:#07182d;color:#b8c7d9;padding:34px 0 20px}.footer-grid{display
 }
 @media(max-width:900px){header .brand strong{white-space:nowrap}}
 </style>
+
+<style id="hamburger-alignment-final-fix">
+@media(max-width:900px){
+  header .nav{
+    width:min(1180px,92%);
+    margin:auto;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:10px;
+    flex-wrap:nowrap;
+    box-sizing:border-box;
+  }
+  header .brand{
+    flex:1 1 auto;
+    min-width:0;
+    overflow:hidden;
+    gap:7px;
+  }
+  header .brand .logo-img{
+    flex:0 0 auto;
+  }
+  header .brand strong{
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:clip;
+  }
+  header .menu{
+    flex:0 0 40px;
+    width:40px;
+    height:40px;
+    margin:0;
+    position:relative;
+    right:0;
+    box-sizing:border-box;
+  }
+}
+@media(max-width:600px){
+  header .brand .logo-img{width:145px;height:50px}
+  header .brand strong{font-size:11px;line-height:1.1}
+  header .brand small{font-size:8px;white-space:nowrap}
+  header .nav{gap:7px}
+}
+</style>
 </head>
 <body>
 <div class="topbar"><div class="container"><span>National Institute of Electronics &amp; Information Technology (NIELIT)</span><span>1st International Conclave of NIELIT on Bio-AI</span></div></div>
