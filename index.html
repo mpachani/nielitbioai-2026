@@ -45,12 +45,28 @@ footer{background:#07182d;color:#b8c7d9;padding:34px 0 20px}.footer-grid{display
 .venue-contact-link{color:inherit;text-decoration:none;cursor:pointer}
 .venue-contact-link:hover{border-color:var(--accent);box-shadow:0 4px 14px rgba(15,35,58,.08)}
 </style>
+
+<style id="mobile-menu-fix">
+@media (max-width: 760px){
+  .nav-toggle{display:flex!important;flex-direction:column;justify-content:center;align-items:center;gap:4px;width:40px;height:40px;padding:7px;background:transparent;border:1px solid var(--line);border-radius:8px;cursor:pointer}
+  .nav-toggle span{display:block!important;width:20px;height:2px;background:var(--navy);border-radius:2px}
+}
+@media (min-width: 761px){
+  .nav-toggle{display:none!important}
+}
+</style>
+
+<style id="mobile-menu-open-fix">
+@media (max-width:760px){
+  .nav-links.mobile-open{display:flex!important}
+}
+</style>
 </head>
 <body>
 <div class="topbar"><div class="container"><span>National Institute of Electronics &amp; Information Technology (NIELIT)</span><span>1st International Conclave of NIELIT on Bio-AI</span></div></div>
 <header><div class="container nav">
 <a class="brand" href="#home"><div class="logo-img"><img src="confLogo.jpeg" alt="NIELIT bioAI Conclave logo"></div><div><strong>NIELIT Bio-AI Conclave 2026</strong><small>NIELIT Bio-AI-2026</small></div></a>
-<nav><a href="#about">About</a><a href="#tracks">Tracks</a><a href="#dates">Dates</a><a href="#committee">Committee</a><a href="#program">Programme</a><a href="#showcase">Showcase</a><a href="#workshops">Workshops</a><a href="#contact">Contact</a><a class="btn btn-primary" href="#submission">Submit Abstract</a></nav>
+<button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button><nav><a href="#about">About</a><a href="#tracks">Tracks</a><a href="#dates">Dates</a><a href="#committee">Committee</a><a href="#program">Programme</a><a href="#showcase">Showcase</a><a href="#workshops">Workshops</a><a href="#contact">Contact</a><a class="btn btn-primary" href="#submission">Submit Abstract</a></nav>
 <button class="menu" aria-label="Menu">☰</button></div></header>
 
 <main>
@@ -174,4 +190,22 @@ footer{background:#07182d;color:#b8c7d9;padding:34px 0 20px}.footer-grid{display
 </div></div></section>
 </main>
 <footer><div class="container"><div class="footer-grid"><div><div class="footer-brand">NIELIT Bio-AI Conclave 2026</div><p>Envisioning the Future of Life Sciences through Artificial Intelligence, Bioinformatics and Digital Innovation.</p><p>1st International Conclave of NIELIT on Bio-AI.</p></div><div><div class="footer-title">Conclave</div><a href="#about">About</a><br><a href="#tracks">Tracks</a><br><a href="#program">Programme</a><br><a href="#showcase">Research Showcase</a></div><div><div class="footer-title">Participation</div><a href="#submission">Submit Abstract / Poster</a><br><a href="#workshops">Workshops</a><br><a href="#contact">Venue &amp; Contact</a></div></div><div class="copyright">© 2026 NIELIT Bio-AI Conclave. Content based on the supplied conference planning document. Verify all programme timings, names, links and official contact details before publication.</div></div></footer>
+
+<script id="mobile-menu-script">
+document.addEventListener('DOMContentLoaded', function () {
+  const toggle = document.querySelector('.nav-toggle');
+  const menu = document.querySelector('.nav-links');
+  if (!toggle || !menu) return;
+  toggle.addEventListener('click', function () {
+    const open = menu.classList.toggle('mobile-open');
+    toggle.setAttribute('aria-expanded', String(open));
+  });
+  menu.querySelectorAll('a').forEach(function (a) {
+    a.addEventListener('click', function () {
+      menu.classList.remove('mobile-open');
+      toggle.setAttribute('aria-expanded', 'false');
+    });
+  });
+});
+</script>
 </body></html>
