@@ -12,7 +12,7 @@
 .container{width:min(1180px,92%);margin:auto}.topbar{background:var(--navy);color:#dfe8f5;font-size:12px}.topbar .container{display:flex;justify-content:space-between;padding:9px 0;gap:20px}
 header{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.97);border-bottom:1px solid var(--line);backdrop-filter:blur(8px)}
 .nav{height:76px;display:flex;align-items:center;justify-content:space-between}.brand{display:flex;align-items:center;gap:12px}.logo-img{width:240px;height:72px;display:flex;align-items:center;justify-content:flex-start;overflow:visible;flex:none}.logo-img img{width:auto;height:auto;max-width:100%;max-height:100%;object-fit:contain;display:block}.brand strong{font-family:Montserrat;font-size:16px;color:var(--navy);line-height:1.15}.brand small{display:block;color:var(--muted);font-size:10px;margin-top:3px}
-nav{display:flex;align-items:center;gap:15px;font-size:12px;font-weight:600;color:#334155;white-space:nowrap}nav a:hover{color:var(--blue)}.menu{display:none;border:0;background:none;font-size:25px}
+nav{display:flex;align-items:center;gap:13px;font-size:12px;font-weight:600;color:#334155;white-space:nowrap}nav a:hover{color:var(--blue)}.meity-support{display:flex;align-items:center;gap:8px;margin-left:2px;padding-left:12px;border-left:1px solid var(--line);white-space:nowrap}.meity-support-label{font-size:9px;line-height:1.15;text-transform:uppercase;letter-spacing:.65px;color:var(--muted);font-weight:800}.meity-support img{display:block;width:112px;height:auto;max-height:38px;object-fit:contain}.menu{display:none;border:0;background:none;font-size:25px}
 .btn{display:inline-flex;align-items:center;justify-content:center;padding:12px 19px;border-radius:7px;font-weight:700;font-size:12px;border:1px solid transparent;white-space:nowrap}.btn-primary{background:var(--blue);color:#fff}.btn-outline{border-color:#cbd5e1;color:var(--navy);background:#fff}.btn-gold{background:var(--accent);color:#111827}
 .hero{background:linear-gradient(135deg,#07182d 0%,#0b2d55 58%,#135dab 100%);color:#fff;padding:20px 0 18px;position:relative;overflow:hidden}.hero:after{content:"";position:absolute;width:550px;height:550px;border:1px solid rgba(255,255,255,.1);border-radius:50%;right:-180px;top:-140px}.eyebrow{font-size:12px;text-transform:uppercase;letter-spacing:2px;color:#cfe0f5;font-weight:700}.hero h1{font-family:Montserrat;font-size:clamp(24px,3.2vw,38px);line-height:1.08;max-width:920px;margin:7px 0}.hero h2{font-size:9px;line-height:1.35;font-weight:500;max-width:760px;color:#dce8f6;margin:0}.hero p{font-size:10px;max-width:820px;color:#dce8f6}.hero-meta{display:flex;flex-wrap:wrap;gap:7px;margin:10px 0}.pill{padding:5px 9px;border:1px solid rgba(255,255,255,.2);border-radius:999px;background:rgba(255,255,255,.07);font-size:10px}.hero-actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
 section{padding:42px 0}.section-head{max-width:790px;margin-bottom:32px}.kicker{font-size:11px;text-transform:uppercase;letter-spacing:1.8px;color:var(--blue);font-weight:800}.section-head h2{font-family:Montserrat;font-size:33px;line-height:1.2;color:var(--navy);margin:8px 0 12px}.section-head p{color:var(--muted)}
@@ -134,12 +134,43 @@ footer{background:#07182d;color:#b8c7d9;padding:34px 0 20px}.footer-grid{display
   }
 }
 </style>
+
+<style id="meity-header-support">
+@media(min-width:901px){
+  header .nav{gap:10px}
+  header nav{gap:11px;font-size:11px}
+  header nav .btn{padding:10px 13px;font-size:11px}
+  .meity-support{margin-left:1px;padding-left:10px}
+  .meity-support img{width:108px;max-height:36px}
+}
+@media(max-width:900px){
+  nav.mobile-open .meity-support{display:flex;justify-content:center;margin:8px 0 2px;padding:10px 0 0;border-left:0;border-top:1px solid var(--line);width:100%}
+  nav.mobile-open .meity-support img{width:125px;max-height:40px}
+  nav.mobile-open .meity-support-label{font-size:10px}
+}
+</style>
+<style id="single-line-conclave-title-rechecked">
+@media(min-width:901px){
+  header .nav{gap:8px;flex-wrap:nowrap}
+  header .brand{flex:0 0 auto;min-width:0;gap:8px;margin-right:6px}
+  header .brand .logo-img{width:180px}
+  header .brand strong{white-space:nowrap;font-size:15px}
+  header .brand small{white-space:nowrap}
+  header nav{flex:0 0 auto;display:flex;align-items:center;gap:8px;white-space:nowrap}
+  header nav > a:not(.btn){font-size:12px}
+  header nav .btn{padding:10px 12px;font-size:12px}
+  header .meity-support{margin-left:0;padding-left:9px}
+  header .meity-support-label{font-size:10px;font-weight:900}
+  header .meity-support img{width:96px;max-height:34px}
+}
+@media(max-width:900px){header .brand strong{white-space:nowrap}}
+</style>
 </head>
 <body>
 <div class="topbar"><div class="container"><span>National Institute of Electronics &amp; Information Technology (NIELIT)</span><span>1st International Conclave of NIELIT on Bio-AI</span></div></div>
 <header><div class="container nav">
 <a class="brand" href="#home"><div class="logo-img"><img src="confLogo.jpeg" alt="NIELIT bioAI Conclave logo"></div><div><strong>NIELIT Bio-AI Conclave 2026</strong><small>NIELIT Bio-AI-2026</small></div></a>
-<nav><a href="#about">About</a><a href="#tracks">Tracks</a><a href="#dates">Dates</a><a href="#committee">Committee</a><a href="#program">Programme</a><a href="#showcase">Showcase</a><a href="#workshops">Workshops</a><a href="#contact">Contact</a><a class="btn btn-primary" href="#submission">Submit Paper</a></nav>
+<nav><a href="#about">About</a><a href="#tracks">Tracks</a><a href="#dates">Dates</a><a href="#committee">Committee</a><a href="#program">Programme</a><a href="#showcase">Showcase</a><a href="#workshops">Workshops</a><a href="#contact">Contact</a><a class="btn btn-primary" href="#submission">Submit Paper</a><div class="meity-support" title="Supported by Ministry of Electronics and Information Technology (MeitY), Government of India"><span class="meity-support-label">Supported<br>By</span><img src="https://upload.wikimedia.org/wikipedia/commons/c/c5/Ministry_of_Electronics_and_Information_Technology.svg" alt="Ministry of Electronics and Information Technology (MeitY), Government of India"></div></nav>
 <button class="menu" aria-label="Menu">☰</button></div></header>
 
 <main>
