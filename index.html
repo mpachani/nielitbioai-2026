@@ -22,7 +22,7 @@ section{padding:42px 0}.section-head{max-width:790px;margin-bottom:32px}.kicker{
 
 .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:17px}.card{border:1px solid var(--line);border-radius:12px;padding:22px;background:#fff}.card:hover{box-shadow:0 12px 28px rgba(15,23,42,.07)}.num{font-family:Montserrat;color:var(--blue);font-size:11px;font-weight:800}.card h3{font-family:Montserrat;color:var(--navy);font-size:16px;margin:8px 0}.card p{color:var(--muted);font-size:12px;margin:0}
 .alt{background:var(--bg)}.dates{display:grid;grid-template-columns:repeat(3,1fr);gap:13px}.date{padding:19px;background:#fff;border:1px solid var(--line);border-radius:10px}.date b{display:block;color:var(--navy);font-size:13px}.date span{font-size:13px;color:var(--blue);font-weight:700}
-.committee{display:grid;grid-template-columns:1fr 1fr;gap:17px}.person{padding:18px 20px;border:1px solid var(--line);border-radius:10px;background:#fff}.person b{display:block;color:var(--navy);font-size:13px}.person span{font-size:12px;color:var(--muted)}
+.committee{display:grid;grid-template-columns:1fr 1fr;gap:17px}.person{padding:18px 20px;border:1px solid var(--line);border-radius:10px;background:#fff}.person b{display:block;color:var(--navy);font-size:13px}.person span{font-size:12px;color:var(--muted)}.national-advisory .committee-members{display:block;margin-top:4px}.national-advisory .committee-members > span{display:block;font-size:12px;color:var(--muted);line-height:1.55;margin:2px 0}
 .program{border:1px solid var(--line);border-radius:12px;overflow:hidden;background:#fff}.daytitle{background:var(--navy);color:#fff;padding:15px 21px;font-family:Montserrat}.row{display:grid;grid-template-columns:105px 1fr 185px;gap:18px;padding:16px 20px;border-bottom:1px solid var(--line);align-items:start}.row:last-child{border:0}.time{font-weight:800;color:var(--blue);font-size:12px}.session strong{color:var(--navy);font-size:13px}.session span{display:block;color:var(--muted);font-size:11px}.room{font-size:11px;color:var(--muted);text-align:right}
 .registration{display:grid;grid-template-columns:1fr 1fr;gap:17px}.price{padding:25px;border:1px solid var(--line);border-radius:12px;background:#fff}.price h3{font-family:Montserrat;color:var(--navy);margin:0;font-size:17px}.price p{font-size:12px;color:var(--muted)}
 .cta{background:var(--navy);color:#fff;border-radius:16px;padding:39px;display:flex;justify-content:space-between;align-items:center;gap:25px}.cta h2{font-family:Montserrat;margin:0 0 7px}.cta p{margin:0;color:#cbd9ea;font-size:13px}
@@ -74,6 +74,65 @@ footer{background:#07182d;color:#b8c7d9;padding:34px 0 20px}.footer-grid{display
 <style id="gu-inner-shift-30">
 .org-item.gu-org .org-logo{position:relative;left:30px}
 .org-item.gu-org > :nth-child(2){position:relative;left:30px}
+</style>
+
+
+<style id="whoswho-name-lines-final">
+#committee .who-names{display:block}
+#committee .who-names > span{display:block;margin-top:3px}
+#committee .committee-members > span{display:block}
+</style><style id="whoswho-patrons-right-final">
+@media(min-width:901px){
+  #committee .committee{
+    display:grid;
+    grid-template-columns:minmax(0,1fr) minmax(0,1fr);
+    gap:17px;
+    align-items:start;
+  }
+  #committee .committee > .person:nth-child(1){grid-column:2;grid-row:1}
+  #committee .committee > .person:nth-child(2){grid-column:1;grid-row:1}
+  #committee .committee > .person:nth-child(3){grid-column:1;grid-row:2}
+  #committee .committee > .person:nth-child(4){grid-column:1;grid-row:3}
+  #committee .committee > .person:nth-child(5){grid-column:1;grid-row:4}
+  #committee .committee > .person:nth-child(6){grid-column:2;grid-row:2}
+}
+@media(max-width:900px){
+  #committee .committee{
+    display:grid;
+    grid-template-columns:1fr;
+    gap:17px;
+  }
+  #committee .committee > .person{
+    grid-column:1;
+    grid-row:auto;
+  }
+}
+</style><style id="committee-two-column-fix">
+@media(min-width:901px){
+  #committee .committee{
+    display:grid;
+    grid-template-columns:minmax(0,1fr) minmax(0,1fr);
+    gap:17px;
+    align-items:start;
+  }
+  #committee .committee-col{
+    display:flex;
+    flex-direction:column;
+    gap:17px;
+    min-width:0;
+  }
+}
+@media(max-width:900px){
+  #committee .committee{
+    display:flex;
+    flex-direction:column;
+    gap:17px;
+  }
+  #committee .committee-left,
+  #committee .committee-right{
+    display:contents;
+  }
+}
 </style>
 </head>
 <body>
@@ -146,12 +205,16 @@ Precision Health</h3><p>Genomics, transcriptomics, proteomics, spatial omics, si
 
 <section class="alt" id="committee"><div class="container"><div class="section-head"><div class="kicker">Who’s Who</div><h2>Conclave leadership &amp; advisory committee</h2></div>
 <div class="committee">
-<div class="person"><b>Patrons</b><span>Prof. M. M. Tripathi; Ms. Tulika Pandey</span></div>
-<div class="person"><b>Conclave Chair</b><span>L. Lanuwabang, Director, NIELIT Guwahati</span></div>
-<div class="person"><b>Organising Chair</b><span>Dr. Saurov Mahanta, NIELIT Guwahati</span></div>
-<div class="person"><b>Organising Secretary</b><span>Sri Mridul Pachani; Sri Raju Sharma, NIELIT Guwahati</span></div>
-<div class="person"><b>Joint Organising Secretaries</b><span>Nabajyoti Goswami; Dr Hemchandra Deka; Manabendra Nath; Janayita Biswa Sharma; Sikha Borah</span></div>
-<div class="person"><b>Advisory Committee</b><span>Prof. Debnath Pal, IISc Bangalore; Prof. A. K. Buragohain, VC, Royal Global University; Prof. Dhruba K. Bhattacharyya, Tezpur University; Prof. Prabodh Borah, Assam Vet and Fishery University; Prof. P.K. Iyer, IIT Guwahati; Prof. Bhaben Tanti, Gauhati University; Prof. S.S. Ghosh, IIT Guwahati; Prof. Anirban Chakraborty, JNU; Dr. Y. Jayanta Singh, ED, NIELIT Imphal; Sri Alok Tripathi, Director, Scheme &amp; Skilling, NIELIT HQ.</span></div>
+<div class="committee-col committee-left">
+<div class="person"><b>Conclave Chair</b><span class="who-names"><span>L. Lanuwabang, Director, NIELIT Guwahati</span></span></div>
+<div class="person"><b>Organising Chair</b><span class="who-names"><span>Dr. Saurov Mahanta, NIELIT Guwahati</span></span></div>
+<div class="person"><b>Organising Secretaries</b><span class="who-names"><span>Sri Mridul Pachani, NIELIT Guwahati</span><span>Sri Raju Sharma, NIELIT Guwahati</span></span></div>
+<div class="person"><b>Joint Organising Secretaries</b><span class="who-names"><span>Sri Nabajyoti Goswami, NIELIT Guwahati</span><span>Dr Hemchandra Deka, NIELIT Guwahati</span><span>Sri Manabendra Nath, NIELIT Guwahati</span><span>Ms. Janayita Biswa Sharma, NIELIT Guwahati</span><span>Ms. Sikha Borah, NIELIT Guwahati</span></span></div>
+</div>
+<div class="committee-col committee-right">
+<div class="person"><b>Patrons</b><span class="who-names"><span>Prof. M. M. Tripathi, Director General, NIELIT</span><span>Ms. Tulika Pandey, Scientist-G, MeitY, GoI</span></span></div>
+<div class="person national-advisory"><b>National Advisory Committee</b><span class="committee-members"><span>Prof. Debnath Pal, IISc Bangalore</span><span>Prof. A. K. Buragohain, Royal Global University</span><span>Prof. Dhruba K. Bhattacharyya, Tezpur University</span><span>Prof. Rintu Banarjee, IIT Kharagpur</span><span>Prof. Prabodh Borah, Assam Veterinary and Fishery University</span><span>Prof. P. K. Iyer, IIT Guwahati</span><span>Prof. Bhaben Tanti, Gauhati University</span><span>Prof. S. S. Ghosh, IIT Guwahati</span><span>Prof. Anirban Chakraborti, JNU</span><span>Dr. Y. Jayanta Singh, NIELIT Imphal</span><span>Sri Alok Tripathi, NIELIT HQ</span><span>Dr Paramanda Saikia, Millipore Sigma, Boston USA</span><span>Dr Antu Kanti Dey, VitriVax, Boulder, Colorado</span><span>Sri Sidhartha Hazarika, Pegasystems, Boston, USA</span><span>Dr. Panchali Goswami, GSK, United Kingdom</span></span></div>
+</div>
 </div></div></section>
 
 <section id="program"><div class="container"><div class="section-head"><div class="kicker">Programme</div><h2>Two days of frontier science, translation &amp; innovation</h2><p>The schedule below presents the programme for the conclave. Items marked as topics indicate the planned/indicative content and may be updated as the programme is finalized.</p></div>
