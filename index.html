@@ -223,9 +223,13 @@ footer{background:#07182d;color:#b8c7d9;padding:34px 0 20px}.footer-grid{display
   .registration-table th:last-child,.registration-table td:last-child{width:33%;}
   .registration-table td:last-child{white-space:normal;}
   .registration-note{font-size:11px;line-height:1.55;}
-  #committee .committee{display:grid !important;grid-template-columns:1fr !important;gap:17px !important;}
-  #committee .committee-right{order:1 !important;}
-  #committee .committee-left{order:2 !important;}
+}
+
+/* Mobile Who's Who order: National Advisory Committee first, then leadership */
+@media(max-width:900px){
+  #committee .committee{display:flex !important;flex-direction:column !important;gap:17px !important;}
+  #committee .committee-left{display:flex !important;flex-direction:column !important;gap:17px !important;order:2 !important;}
+  #committee .committee-right{display:flex !important;flex-direction:column !important;gap:17px !important;order:1 !important;}
 }
 </style>
 </head>
