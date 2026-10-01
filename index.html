@@ -212,7 +212,23 @@ footer{background:#07182d;color:#b8c7d9;padding:34px 0 20px}.footer-grid{display
 @media(max-width:900px){
 #committee .committee{display:flex !important;flex-direction:column !important;gap:17px !important}
 #committee .committee-left,#committee .committee-right{display:contents !important}
-}</style></head>
+}</style><style id="mobile-registration-committee-fix">
+@media(max-width:600px){
+  /* Registration table: fit the viewport without horizontal scrolling */
+  .registration-section .container{width:min(100% - 28px,1180px)}
+  .registration-table-wrap{overflow:visible;width:100%;}
+  .registration-table{width:100%;min-width:0;table-layout:fixed;}
+  .registration-table th,.registration-table td{padding:12px 10px;font-size:11px;line-height:1.45;overflow-wrap:anywhere;word-break:normal;}
+  .registration-table th:first-child,.registration-table td:first-child{width:67%;}
+  .registration-table th:last-child,.registration-table td:last-child{width:33%;}
+  .registration-table td:last-child{white-space:normal;}
+  .registration-note{font-size:11px;line-height:1.55;}
+  #committee .committee{display:grid !important;grid-template-columns:1fr !important;gap:17px !important;}
+  #committee .committee-right{order:1 !important;}
+  #committee .committee-left{order:2 !important;}
+}
+</style>
+</head>
 <body>
 <div class="topbar"><div class="container"><span>National Institute of Electronics &amp; Information Technology (NIELIT)</span><span>1st International Conclave of NIELIT on Bio-AI</span></div></div>
 <header><div class="container nav">
@@ -381,4 +397,21 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 });
 </script>
-</body></html>
+</body></html><style id="mobile-registration-committee-fix">
+@media(max-width:600px){
+  /* Registration table: fit the viewport without horizontal scrolling */
+  .registration-section .container{width:min(100% - 28px,1180px)}
+  .registration-table-wrap{overflow:visible;width:100%;}
+  .registration-table{width:100%;min-width:0;table-layout:fixed;}
+  .registration-table th,.registration-table td{padding:12px 10px;font-size:11px;line-height:1.45;overflow-wrap:anywhere;word-break:normal;}
+  .registration-table th:first-child,.registration-table td:first-child{width:67%;}
+  .registration-table th:last-child,.registration-table td:last-child{width:33%;}
+  .registration-table td:last-child{white-space:normal;}
+  .registration-note{font-size:11px;line-height:1.55;}
+
+  /* Mobile Who's Who order: National Advisory Committee first, then Patrons */
+  #committee .committee{display:grid !important;grid-template-columns:1fr !important;gap:17px !important;}
+  #committee .committee-right{order:1 !important;}
+  #committee .committee-left{order:2 !important;}
+}
+</style>
