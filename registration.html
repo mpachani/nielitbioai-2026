@@ -17,7 +17,63 @@ header{background:rgba(255,255,255,.97);border-bottom:1px solid var(--line)}.nav
 main{padding:38px 0 60px}.layout{display:grid;grid-template-columns:.8fr 1.2fr;gap:22px;align-items:start}.card{background:#fff;border:1px solid var(--line);border-radius:14px;padding:25px;box-shadow:0 10px 28px rgba(15,23,42,.05)}.card h2{font-family:Montserrat;color:var(--navy);font-size:21px;margin:0 0 13px}.card h3{font-family:Montserrat;color:var(--navy);font-size:15px;margin:22px 0 9px}.note{font-size:12px;color:var(--muted)}.important{padding:13px 14px;border-left:4px solid var(--accent);background:#fff8e8;border-radius:6px;font-size:12px;margin:15px 0}.fee{display:flex;justify-content:space-between;gap:15px;padding:12px 0;border-bottom:1px solid var(--line);font-size:12px}.fee:last-child{border-bottom:0}.fee strong{color:var(--navy)}.fee span{font-weight:800;color:var(--blue);white-space:nowrap}.qr-wrap{display:flex;justify-content:center;padding:10px 0}.qr-card{width:min(100%,390px);padding:8px;border:1px solid var(--line);border-radius:12px;background:#fff;box-shadow:0 6px 18px rgba(15,23,42,.06)}.qr-card img{display:block;width:100%;height:auto;border-radius:7px}.payment-account{margin:10px auto 0;width:min(100%,390px);padding:11px 13px;border:1px solid #cfe0f5;border-radius:8px;background:#eef5ff;color:var(--navy);font-size:11px;line-height:1.7;text-align:center}.payment-account strong{font-weight:800}
 .form-grid{display:grid;grid-template-columns:1fr 1fr;gap:15px}.field{display:flex;flex-direction:column;gap:6px}.field.full{grid-column:1/-1}.field label{font-size:11px;font-weight:800;color:var(--navy)}.field label span{font-weight:500;color:var(--muted)}input,select,textarea{font:inherit;font-size:12px;padding:11px 12px;border:1px solid #cbd5e1;border-radius:7px;background:#fff;color:var(--ink);outline:none}input:focus,select:focus,textarea:focus{border-color:var(--blue);box-shadow:0 0 0 3px rgba(19,93,171,.1)}textarea{min-height:85px;resize:vertical}.fee-box{padding:13px 15px;background:#eef5ff;border:1px solid #cfe0f5;border-radius:8px;display:flex;justify-content:space-between;align-items:center;margin-top:2px}.fee-box b{font-family:Montserrat;color:var(--navy)}.fee-box strong{font-size:20px;color:var(--blue)}.declaration{font-size:11px;color:var(--muted);padding:12px 14px;background:#f8fafc;border:1px solid var(--line);border-radius:8px}.check{display:flex;gap:9px;align-items:flex-start}.check input{margin-top:3px}.actions{display:flex;align-items:center;gap:12px;margin-top:18px}.btn{display:inline-flex;align-items:center;justify-content:center;padding:12px 19px;border-radius:7px;font-weight:700;font-size:12px;border:1px solid transparent;cursor:pointer}.btn-primary{background:var(--blue);color:#fff}.btn-outline{border-color:#cbd5e1;color:var(--navy);background:#fff}.btn:disabled{opacity:.55;cursor:not-allowed}.status{font-size:11px;font-weight:700}.status.ok{color:var(--green)}.status.err{color:var(--red)}
 footer{background:#07182d;color:#b8c7d9;padding:25px 0;font-size:10px}footer a{color:#dbe7f5}
-@media(max-width:800px){.layout{grid-template-columns:1fr}.form-grid{grid-template-columns:1fr}.field.full{grid-column:auto}.brand img{width:150px;height:50px}.nav{min-height:68px}.hero{padding:32px 0}.card{padding:20px}}
+
+/* Mobile / small-screen layout */
+@media(max-width:800px){
+  html,body{width:100%;max-width:100%;overflow-x:hidden}
+  .container{width:calc(100% - 24px);max-width:100%;}
+  .topbar{font-size:10px}
+  .topbar .container{padding:7px 0;line-height:1.35}
+  .nav{min-height:0;padding:12px 0;display:flex;align-items:center;flex-wrap:wrap;gap:10px 12px}
+  .brand{min-width:0;flex:1 1 100%;gap:9px}
+  .brand img{width:120px;height:44px;flex:0 0 auto}
+  .brand span{min-width:0}
+  .brand strong{display:block;font-size:13px;line-height:1.2;white-space:normal;overflow-wrap:anywhere}
+  .brand small{font-size:9px}
+  .back{font-size:11px;margin-left:auto;padding-bottom:2px}
+  .hero{padding:27px 0}
+  .hero h1{font-size:clamp(24px,8vw,34px);line-height:1.14;overflow-wrap:anywhere}
+  .hero p{font-size:12px;line-height:1.55}
+  main{padding:22px 0 38px}
+  .layout{grid-template-columns:1fr;gap:16px}
+  .card{padding:17px 14px;border-radius:11px;box-shadow:0 6px 18px rgba(15,23,42,.05);min-width:0}
+  .card h2{font-size:18px;line-height:1.25}
+  .card h3{font-size:14px;line-height:1.3;margin-top:18px}
+  .important{font-size:11px;padding:11px 12px;line-height:1.55}
+  .fee{font-size:11px;gap:8px;align-items:flex-start}
+  .fee strong{min-width:0;overflow-wrap:anywhere}
+  .fee span{flex:0 0 auto}
+  .qr-wrap{padding:8px 0}
+  .qr-card{width:min(100%,300px)}
+  .payment-account{width:100%;max-width:390px;font-size:10px;overflow-wrap:anywhere}
+  .form-grid{grid-template-columns:1fr;gap:12px}
+  .field,.field.full{grid-column:auto;min-width:0}
+  .field label{font-size:11px;line-height:1.35}
+  input,select,textarea{width:100%;max-width:100%;min-width:0;font-size:16px;padding:10px 11px}
+  input[type="file"]{font-size:13px;padding:8px;overflow:hidden}
+  input[type="date"]{min-height:42px}
+  textarea{min-height:90px}
+  .fee-box{gap:10px;padding:11px 12px;flex-wrap:wrap}
+  .fee-box b{font-size:12px}
+  .fee-box strong{font-size:18px}
+  .declaration{font-size:10.5px;line-height:1.5}
+  .check{gap:8px}
+  .check input{width:auto;min-width:18px;flex:0 0 auto}
+  .actions{display:flex;flex-direction:column;align-items:stretch;gap:9px;margin-top:15px}
+  .btn{width:100%;min-height:44px;padding:11px 13px;text-align:center;line-height:1.3}
+  .status{text-align:center;min-height:17px}
+  footer{padding:20px 0;font-size:9px}
+}
+
+@media(max-width:380px){
+  .container{width:calc(100% - 18px)}
+  .card{padding:15px 11px}
+  .brand img{width:105px;height:40px}
+  .brand strong{font-size:12px}
+  .back{font-size:10px}
+  .hero h1{font-size:24px}
+  .qr-card{width:min(100%,260px)}
+}
 </style>
 </head>
 <body>
