@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Registration & Payment | NIELIT Bio-AI Conclave 2026</title>
+<meta name="description" content="Registration and manual UPI payment submission for NIELIT Bio-AI Conclave 2026.">
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#0b1f3a;--blue:#135dab;--accent:#d79b27;--ink:#182230;--muted:#64748b;--bg:#f6f8fb;--white:#fff;--line:#e5eaf1;--green:#16794a;--red:#b42318}
+*{box-sizing:border-box}body{margin:0;font-family:Inter,Arial,sans-serif;color:var(--ink);line-height:1.6;background:var(--bg)}a{text-decoration:none;color:inherit}.container{width:min(1120px,92%);margin:auto}
+.topbar{background:var(--navy);color:#dfe8f5;font-size:12px}.topbar .container{padding:9px 0;text-align:center}
+header{background:rgba(255,255,255,.97);border-bottom:1px solid var(--line)}.nav{min-height:78px;display:flex;align-items:center;justify-content:space-between;gap:20px}.brand{display:flex;align-items:center;gap:12px}.brand img{width:190px;height:58px;object-fit:contain}.brand strong{font-family:Montserrat;font-size:15px;color:var(--navy);line-height:1.15}.brand small{display:block;color:var(--muted);font-size:10px;margin-top:3px}.back{font-size:12px;font-weight:700;color:var(--blue)}
+.hero{background:linear-gradient(135deg,#07182d,#0b2d55 58%,#135dab);color:#fff;padding:42px 0}.hero .kicker{font-size:11px;text-transform:uppercase;letter-spacing:1.8px;color:#cfe0f5;font-weight:800}.hero h1{font-family:Montserrat;font-size:clamp(27px,4vw,42px);line-height:1.12;margin:8px 0}.hero p{max-width:800px;color:#dce8f6;font-size:13px;margin:0}
+main{padding:38px 0 60px}.layout{display:grid;grid-template-columns:.8fr 1.2fr;gap:22px;align-items:start}.card{background:#fff;border:1px solid var(--line);border-radius:14px;padding:25px;box-shadow:0 10px 28px rgba(15,23,42,.05)}.card h2{font-family:Montserrat;color:var(--navy);font-size:21px;margin:0 0 13px}.card h3{font-family:Montserrat;color:var(--navy);font-size:15px;margin:22px 0 9px}.note{font-size:12px;color:var(--muted)}.important{padding:13px 14px;border-left:4px solid var(--accent);background:#fff8e8;border-radius:6px;font-size:12px;margin:15px 0}.fee{display:flex;justify-content:space-between;gap:15px;padding:12px 0;border-bottom:1px solid var(--line);font-size:12px}.fee:last-child{border-bottom:0}.fee strong{color:var(--navy)}.fee span{font-weight:800;color:var(--blue);white-space:nowrap}.qr-wrap{display:flex;justify-content:center;padding:10px 0}.qr-card{width:min(100%,390px);padding:8px;border:1px solid var(--line);border-radius:12px;background:#fff;box-shadow:0 6px 18px rgba(15,23,42,.06)}.qr-card img{display:block;width:100%;height:auto;border-radius:7px}.payment-account{margin:10px auto 0;width:min(100%,390px);padding:11px 13px;border:1px solid #cfe0f5;border-radius:8px;background:#eef5ff;color:var(--navy);font-size:11px;line-height:1.7;text-align:center}.payment-account strong{font-weight:800}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:15px}.field{display:flex;flex-direction:column;gap:6px}.field.full{grid-column:1/-1}.field label{font-size:11px;font-weight:800;color:var(--navy)}.field label span{font-weight:500;color:var(--muted)}input,select,textarea{font:inherit;font-size:12px;padding:11px 12px;border:1px solid #cbd5e1;border-radius:7px;background:#fff;color:var(--ink);outline:none}input:focus,select:focus,textarea:focus{border-color:var(--blue);box-shadow:0 0 0 3px rgba(19,93,171,.1)}textarea{min-height:85px;resize:vertical}.fee-box{padding:13px 15px;background:#eef5ff;border:1px solid #cfe0f5;border-radius:8px;display:flex;justify-content:space-between;align-items:center;margin-top:2px}.fee-box b{font-family:Montserrat;color:var(--navy)}.fee-box strong{font-size:20px;color:var(--blue)}.declaration{font-size:11px;color:var(--muted);padding:12px 14px;background:#f8fafc;border:1px solid var(--line);border-radius:8px}.check{display:flex;gap:9px;align-items:flex-start}.check input{margin-top:3px}.actions{display:flex;align-items:center;gap:12px;margin-top:18px}.btn{display:inline-flex;align-items:center;justify-content:center;padding:12px 19px;border-radius:7px;font-weight:700;font-size:12px;border:1px solid transparent;cursor:pointer}.btn-primary{background:var(--blue);color:#fff}.btn-outline{border-color:#cbd5e1;color:var(--navy);background:#fff}.btn:disabled{opacity:.55;cursor:not-allowed}.status{font-size:11px;font-weight:700}.status.ok{color:var(--green)}.status.err{color:var(--red)}
+footer{background:#07182d;color:#b8c7d9;padding:25px 0;font-size:10px}footer a{color:#dbe7f5}
+@media(max-width:800px){.layout{grid-template-columns:1fr}.form-grid{grid-template-columns:1fr}.field.full{grid-column:auto}.brand img{width:150px;height:50px}.nav{min-height:68px}.hero{padding:32px 0}.card{padding:20px}}
+</style>
+</head>
+<body>
+<div class="topbar"><div class="container">NIELIT Bio-AI Conclave 2026 • Registration &amp; Manual Payment</div></div>
+<header><div class="container nav"><a class="brand" href="index.html"><img src="confLogo.jpeg" alt="NIELIT Bio-AI Conclave 2026"><span><strong>NIELIT Bio-AI Conclave 2026</strong><small>Registration &amp; Payment</small></span></a><a class="back" href="index.html">← Back to Conclave Website</a></div></header>
+<section class="hero"><div class="container"><div class="kicker">Registration</div><h1>Registration &amp; Payment Submission</h1><p>Select your participant category, make the applicable payment using the official NIELIT Guwahati QR code, and then submit the payment/transaction details along with your registration information.</p></div></section>
+<main><div class="container layout">
+<section class="card">
+<h2>Payment Instructions</h2>
+<div class="important"><strong>Manual payment process:</strong> Make the payment using the official NIELIT Guwahati UPI QR code. After completing the payment, retain the transaction/UTR number and transaction date and enter them in the form.</div>
+<h3>Registration Fee</h3>
+<div class="fee"><strong>Student Authors</strong><span>₹750/-</span></div>
+<div class="fee"><strong>Authors from Academic Institutions (employed persons)</strong><span>₹1,500/-</span></div>
+<div class="fee"><strong>Non-Author Attendees</strong><span>₹500/-</span></div>
+<div class="fee"><strong>Individual Participants from Industry (Author/Attendee)</strong><span>₹5,000/-</span></div>
+<h3>Official NIELIT Guwahati QR Code</h3>
+<div class="qr-wrap"><div class="qr-card"><img src="nielit-guwahati-qr.png" alt="NIELIT Guwahati SBI Payments QR code"></div></div>
+<div class="payment-account"><strong>Merchant Name:</strong> NIELITGUWAHATI<br><strong>UPI ID:</strong> 9859151830@SBI</div>
+<p class="note"><strong>Important:</strong> Only the QR code/payment account officially authorised by NIELIT Guwahati should be used. Do not use a personal payment account.</p>
+</section>
+<section class="card">
+<h2>Participant &amp; Payment Details</h2>
+<p class="note">Fields marked <strong>*</strong> are mandatory. The registration will remain subject to verification of the payment transaction by the conference secretariat.</p>
+<form id="registrationForm">
+<div class="form-grid">
+<div class="field"><label>Full Name *</label><input name="fullName" required maxlength="100" autocomplete="name"></div>
+<div class="field"><label>Email Address *</label><input type="email" name="email" required maxlength="150" autocomplete="email"></div>
+<div class="field"><label>Mobile Number *</label><input type="tel" name="mobile" required maxlength="15" pattern="[0-9+ -]{10,15}" autocomplete="tel"></div>
+<div class="field"><label>Organisation / Institution *</label><input name="organisation" required maxlength="150"></div>
+<div class="field"><label>Designation / Programme *</label><input name="designation" required maxlength="120"></div>
+<div class="field"><label>Participant Category *</label><select name="category" id="category" required><option value="">Select category</option><option value="Student Authors">Student Authors — ₹750</option><option value="Academic Authors">Authors from Academic Institutions (employed persons) — ₹1,500</option><option value="Non-Author Attendees">Non-Author Attendees — ₹500</option><option value="Industry Participants">Individual Participants from Industry (Author/Attendee) — ₹5,000</option></select></div>
+<div class="field"><label>Payment Amount (₹) *</label><input type="number" name="amount" id="amount" min="0" step="1" required readonly></div>
+<div class="field"><label>Transaction / UTR Number *</label><input name="transactionNo" required maxlength="80" placeholder="Enter UPI transaction/UTR number"></div>
+<div class="field"><label>Transaction Date *</label><input type="date" name="transactionDate" required></div>
+<div class="field full"><label>Transaction Snapshot * <span>(JPG/PNG/PDF, maximum 200 KB)</span></label><input type="file" id="transactionSnapshot" name="transactionSnapshot" accept="image/jpeg,image/png,application/pdf" required><small class="note">Upload a clear screenshot/photo or PDF showing the payment transaction. Maximum file size: 200 KB.</small></div>
+<div class="field"><label>Payment Mode</label><select name="paymentMode"><option>UPI QR</option><option>Other</option></select></div>
+<div class="field full"><label>Paper Title <span>(if registering as an author)</span></label><input name="paperTitle" maxlength="250"></div>
+<div class="field full"><label>Remarks <span>(optional)</span></label><textarea name="remarks" maxlength="500"></textarea></div>
+<div class="field full"><div class="fee-box"><b>Applicable Registration Fee</b><strong id="feeDisplay">₹0</strong></div></div>
+<div class="field full"><div class="declaration"><label class="check"><input type="checkbox" name="declaration" value="Yes" required><span>I confirm that the participant details and payment/transaction details entered above are correct. I understand that registration is subject to verification of the payment by the conference secretariat.</span></label></div></div>
+</div>
+<div class="actions"><button class="btn btn-primary" type="submit" id="submitBtn">Submit Registration &amp; Payment Details</button><span id="status" class="status" aria-live="polite"></span></div>
+</form>
+</section>
+</div></main>
+<footer><div class="container">© 2026 NIELIT Bio-AI Conclave • <a href="index.html">Return to main website</a></div></footer>
+<script>
+/* Replace this with the deployed Google Apps Script Web App URL. */
+const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwKmub8UMybbDUsRttqGV-6IzrSCdfzvBIau8xImVaQhCVmwpcbXcRWGsVRZMd0foHs/exec';
+const feeMap={'Student Authors':750,'Academic Authors':1500,'Non-Author Attendees':500,'Industry Participants':5000};
+const MAX_SNAPSHOT_BYTES=200*1024;
+const category=document.getElementById('category'), amount=document.getElementById('amount'), feeDisplay=document.getElementById('feeDisplay'), form=document.getElementById('registrationForm'), statusEl=document.getElementById('status'), submitBtn=document.getElementById('submitBtn'), snapshotInput=document.getElementById('transactionSnapshot');
+function updateFee(){const fee=feeMap[category.value]||0;amount.value=fee;feeDisplay.textContent='₹'+fee.toLocaleString('en-IN');}
+category.addEventListener('change',updateFee); updateFee();
+form.addEventListener('submit',async function(e){
+ e.preventDefault();
+ statusEl.className='status'; statusEl.textContent='Submitting…'; submitBtn.disabled=true;
+ if(APPS_SCRIPT_URL.includes('PASTE_GOOGLE')){statusEl.className='status err';statusEl.textContent='Deployment URL has not been configured yet.';submitBtn.disabled=false;return;}
+ const file=snapshotInput.files[0];
+ if(!file){statusEl.className='status err';statusEl.textContent='Please upload the Transaction Snapshot.';submitBtn.disabled=false;return;}
+ if(file.size>MAX_SNAPSHOT_BYTES){statusEl.className='status err';statusEl.textContent='Transaction Snapshot must not exceed 200 KB.';submitBtn.disabled=false;return;}
+ const allowed=['image/jpeg','image/png','application/pdf'];
+ if(!allowed.includes(file.type)){statusEl.className='status err';statusEl.textContent='Please upload a JPG, PNG or PDF file.';submitBtn.disabled=false;return;}
+ try{
+   const dataUrl=await new Promise((resolve,reject)=>{const r=new FileReader();r.onload=()=>resolve(r.result);r.onerror=()=>reject(new Error('Unable to read snapshot'));r.readAsDataURL(file);});
+   const data=new URLSearchParams(new FormData(form));
+   data.set('transactionSnapshotData',dataUrl); data.set('transactionSnapshotName',file.name); data.set('transactionSnapshotType',file.type);
+   await fetch(APPS_SCRIPT_URL,{method:'POST',mode:'no-cors',headers:{'Content-Type':'application/x-www-form-urlencoded;charset=UTF-8'},body:data.toString()});
+   form.reset(); updateFee(); statusEl.className='status ok'; statusEl.textContent='Details submitted. Please retain your transaction/UTR number for verification.';
+ }catch(err){statusEl.className='status err';statusEl.textContent='Submission could not be sent. Please try again or contact the Conference Secretariat.';}
+ submitBtn.disabled=false;
+});
+</script>
+</body></html>
